@@ -21,8 +21,10 @@ int main() {
 			fout << (char)((text[i])+key);
 			i++;
 		}
+		cout << "Press any key to continue . . .";
+		cin.get();
 	}
-	else {
+	else if(choice == 2) {
 		cout << "\nInput text to decrypt (max 200000 characters): ";
 		cin.ignore();
 		cin.getline(text, 200000);
@@ -30,9 +32,11 @@ int main() {
 		int i = 0;
 		while (text[i] != 0) {
 			cout << (char)((text[i])-key);
-			fout << (char)((text[i])-key);
+			fout2 << (char)((text[i])-key);
 			i++;
 		}
+		cout << "Press any key to continue . . .";
+		cin.get();
 	}
 	return 0;
 }
